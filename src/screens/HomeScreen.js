@@ -30,6 +30,18 @@ const HomeScreen = ({navigation}) => {
           navigation.navigate('CounterScreen');
         }}
       />
+      <Button
+        title="Go to Colors Demo"
+        onPress={() => {
+          navigation.navigate('Colors');
+        }}
+      />
+      <Button
+        title="Go to Color Manager Demo"
+        onPress={() => {
+          navigation.navigate('ColorManager');
+        }}
+      />
       {/* <TouchableOpacity
         onPress={() => {
           props.navigation.navigate('Components');
