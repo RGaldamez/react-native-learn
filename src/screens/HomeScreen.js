@@ -42,6 +42,12 @@ const HomeScreen = ({navigation}) => {
           navigation.navigate('ColorManager');
         }}
       />
+      <Button
+        title="Go to Text Demo"
+        onPress={() => {
+          navigation.navigate('Text');
+        }}
+      />
       {/* <TouchableOpacity
         onPress={() => {
           props.navigation.navigate('Components');
