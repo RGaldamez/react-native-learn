@@ -13,25 +13,25 @@ const reducer = (state, action) => {
         ? state
         : {...state, red: state.red + action.payload};
     case 'decrease_red':
-      return state.red + action.payload < 0
+      return state.red - action.payload < 0
         ? state
-        : {...state, red: state.red + action.payload};
+        : {...state, red: state.red - action.payload};
     case 'increase_green':
       return state.green + action.payload > 255
         ? state
         : {...state, green: state.green + action.payload};
     case 'decrease_green':
-      return state.green + action.payload < 0
+      return state.green - action.payload < 0
         ? state
-        : {...state, green: state.green + action.payload};
+        : {...state, green: state.green - action.payload};
     case 'increase_blue':
       return state.blue + action.payload > 255
         ? state
         : {...state, blue: state.blue + action.payload};
     case 'decrease_blue':
-      return state.blue + action.payload < 0
+      return state.blue - action.payload < 0
         ? state
-        : {...state, blue: state.blue + action.payload};
+        : {...state, blue: state.blue - action.payload};
     default:
       return state;
   }
@@ -51,7 +51,7 @@ const ColorManagerScreen = () => {
           dispatch({type: 'increase_red', payload: COLOR_INCREMENT})
         }
         onDecrease={() =>
-          dispatch({type: 'decrease_red', payload: -1 * COLOR_INCREMENT})
+          dispatch({type: 'decrease_red', payload: COLOR_INCREMENT})
         }
         color="Red"
       />
@@ -60,7 +60,7 @@ const ColorManagerScreen = () => {
           dispatch({type: 'increase_green', payload: COLOR_INCREMENT})
         }
         onDecrease={() =>
-          dispatch({type: 'decrease_green', payload: -1 * COLOR_INCREMENT})
+          dispatch({type: 'decrease_green', payload: COLOR_INCREMENT})
         }
         color="Green"
       />
@@ -69,7 +69,7 @@ const ColorManagerScreen = () => {
           dispatch({type: 'increase_blue', payload: COLOR_INCREMENT})
         }
         onDecrease={() =>
-          dispatch({type: 'decrease_blue', payload: -1 * COLOR_INCREMENT})
+          dispatch({type: 'decrease_blue', payload: COLOR_INCREMENT})
         }
         color="Blue"
       />
