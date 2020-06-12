@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     position: 'relative', // relative-default, absolute to place regardless of siblings
     //top left bottom right, moves units after everything is rendered
 
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFillObject, // same as bottom 5 rules
     // position: 'absolute',
     // top: '0',
     // bottom: '0',
